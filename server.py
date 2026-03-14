@@ -114,16 +114,35 @@ class InspectionMaster:
             raise FileNotFoundError(f"Failed to read image: {path}")
         return image
 
-    def _find_reference_image_path(self, product_dir: Path, step_number: int) -> Path:
-        run_images = self._collect_images(product_dir)
-        if len(run_images) < 1:
-            raise ValueError(f"No reference images found in: {product_dir}")
+    def _find_reference_image_path(self, model_name: str, product_id: str, step_number: int) -> Path:
+        template_base_dir = self.template_root_dir / model_name / product_id
+        if not template_base_dir.exists() or not template_base_dir.is_dir():
+            raise FileNotFoundError(f"Template base directory not found: {template_base_dir}")
 
-        target_stem = f"step_{step_number}"
-        target_path = next((path for path in run_images if path.stem.lower() == target_stem), None)
-        if target_path is None:
-            raise FileNotFoundError(f"Reference image not found: {product_dir / target_stem}")
-        return target_path
+        step_names = self._template_step_names(step_number)
+        step_name_set = {name.lower() for name in step_names}
+
+        # 1) templates/<model>/<product>/step_tem_<n>.jpg
+        base_images = self._collect_images(template_base_dir)
+        target_path = next((path for path in base_images if path.stem.lower() in step_name_set), None)
+        if target_path is not None:
+            return target_path
+
+        # 2) templates/<model>/<product>/step_tem_<n>/*.jpg
+        for step_name in step_names:
+            template_dir = template_base_dir / step_name
+            if template_dir.exists() and template_dir.is_dir():
+                template_paths = self._collect_images(template_dir)
+                if not template_paths:
+                    raise ValueError(f"No template images found in: {template_dir}")
+                return template_paths[0]
+
+        expected_paths = [str(template_base_dir / name) for name in step_names]
+        raise FileNotFoundError(
+            "Reference template path not found. Expected one of: "
+            + ", ".join(expected_paths)
+            + " (folder or image files)"
+        )
 
     def _template_step_names(self, step_number: int):
         names = [
@@ -147,14 +166,10 @@ class InspectionMaster:
                     raise ValueError(f"No template images found in: {template_dir}")
                 return [self._read_image(path) for path in template_paths], str(template_dir)
 
+        # Exact stem match only to avoid step_tem_1 matching step_tem_10, step_tem_11, ...
+        base_images = self._collect_images(template_base_dir)
         for step_name in step_names:
-            template_paths = sorted(
-                [
-                    path
-                    for path in template_base_dir.glob(f"{step_name}*")
-                    if path.is_file() and path.suffix.lower() in IMAGE_EXTENSIONS
-                ]
-            )
+            template_paths = [path for path in base_images if path.stem.lower() == step_name.lower()]
             if template_paths:
                 return [self._read_image(path) for path in template_paths], str(template_base_dir)
 
@@ -190,15 +205,12 @@ class InspectionMaster:
         source_relative_path = self._normalize_relative_path(payload.source_path)
         step_number = self._extract_step_number(source_relative_path)
 
-        product_dir = self.data_dir / payload.model_name / payload.product_id
-        if not product_dir.exists() or not product_dir.is_dir():
-            raise HTTPException(
-                status_code=404,
-                detail=f"Reference folder not found: {payload.model_name}/{payload.product_id}",
-            )
-
         try:
-            reference_image_path = self._find_reference_image_path(product_dir, step_number)
+            reference_image_path = self._find_reference_image_path(
+                payload.model_name,
+                payload.product_id,
+                step_number,
+            )
             template_all_img = self._read_image(reference_image_path)
             templates, template_source_path = self._load_manual_templates(
                 payload.model_name,

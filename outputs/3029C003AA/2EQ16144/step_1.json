@@ -1,0 +1,13 @@
+{
+  "model_name": "3029C003AA",
+  "product_id": "2EQ16144",
+  "source_path": "3029C003AA/2EQ16144/step_1.jpg",
+  "step_number": 1,
+  "reference_image_path": "templates\\3029C003AA\\2EQ16144\\step_tem_1.jpg",
+  "template_source_path": "templates\\3029C003AA\\2EQ16144",
+  "output_image_path": "outputs\\3029C003AA\\2EQ16144\\step_1.jpg",
+  "scores": [
+    0.8544590473175049
+  ],
+  "avg_score": 0.8544590473175049
+}
