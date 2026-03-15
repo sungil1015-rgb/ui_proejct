@@ -1,0 +1,101 @@
+{
+  "server_endpoint": "http://127.0.0.1:8000/inspect",
+  "data_dir": "C:\\YuYu\\Ui_Proejct\\data",
+  "total": 15,
+  "success": 0,
+  "failed": 15,
+  "mean_avg_score": 0.0,
+  "successes": [],
+  "failures": [
+    {
+      "image_path": "data\\3029C003AA\\2EQ16144\\step_0.jpg",
+      "source_path": "3029C003AA/2EQ16144/step_0.jpg",
+      "stage": "request",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /inspect (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다\"))"
+    },
+    {
+      "image_path": "data\\3029C003AA\\2EQ16144\\step_1.jpg",
+      "source_path": "3029C003AA/2EQ16144/step_1.jpg",
+      "stage": "request",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /inspect (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다\"))"
+    },
+    {
+      "image_path": "data\\3029C003AA\\2EQ16144\\step_10.jpg",
+      "source_path": "3029C003AA/2EQ16144/step_10.jpg",
+      "stage": "request",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /inspect (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다\"))"
+    },
+    {
+      "image_path": "data\\3029C003AA\\2EQ16144\\step_11.jpg",
+      "source_path": "3029C003AA/2EQ16144/step_11.jpg",
+      "stage": "request",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /inspect (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다\"))"
+    },
+    {
+      "image_path": "data\\3029C003AA\\2EQ16144\\step_12.jpg",
+      "source_path": "3029C003AA/2EQ16144/step_12.jpg",
+      "stage": "request",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /inspect (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다\"))"
+    },
+    {
+      "image_path": "data\\3029C003AA\\2EQ16144\\step_13.jpg",
+      "source_path": "3029C003AA/2EQ16144/step_13.jpg",
+      "stage": "request",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /inspect (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다\"))"
+    },
+    {
+      "image_path": "data\\3029C003AA\\2EQ16144\\step_14.jpg",
+      "source_path": "3029C003AA/2EQ16144/step_14.jpg",
+      "stage": "request",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /inspect (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다\"))"
+    },
+    {
+      "image_path": "data\\3029C003AA\\2EQ16144\\step_2.jpg",
+      "source_path": "3029C003AA/2EQ16144/step_2.jpg",
+      "stage": "request",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /inspect (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다\"))"
+    },
+    {
+      "image_path": "data\\3029C003AA\\2EQ16144\\step_3.jpg",
+      "source_path": "3029C003AA/2EQ16144/step_3.jpg",
+      "stage": "request",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /inspect (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다\"))"
+    },
+    {
+      "image_path": "data\\3029C003AA\\2EQ16144\\step_4.jpg",
+      "source_path": "3029C003AA/2EQ16144/step_4.jpg",
+      "stage": "request",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /inspect (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다\"))"
+    },
+    {
+      "image_path": "data\\3029C003AA\\2EQ16144\\step_5.jpg",
+      "source_path": "3029C003AA/2EQ16144/step_5.jpg",
+      "stage": "request",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /inspect (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다\"))"
+    },
+    {
+      "image_path": "data\\3029C003AA\\2EQ16144\\step_6.jpg",
+      "source_path": "3029C003AA/2EQ16144/step_6.jpg",
+      "stage": "request",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /inspect (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다\"))"
+    },
+    {
+      "image_path": "data\\3029C003AA\\2EQ16144\\step_7.jpg",
+      "source_path": "3029C003AA/2EQ16144/step_7.jpg",
+      "stage": "request",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /inspect (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다\"))"
+    },
+    {
+      "image_path": "data\\3029C003AA\\2EQ16144\\step_8.jpg",
+      "source_path": "3029C003AA/2EQ16144/step_8.jpg",
+      "stage": "request",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /inspect (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다\"))"
+    },
+    {
+      "image_path": "data\\3029C003AA\\2EQ16144\\step_9.jpg",
+      "source_path": "3029C003AA/2EQ16144/step_9.jpg",
+      "stage": "request",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /inspect (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다\"))"
+    }
+  ]
+}
